@@ -1,0 +1,39 @@
+Requirements for the GPON graphing project
+
+Create a new folder on the server e.g SDC
+Within the SDC folder, create a virtual environment where required dependencies/files are to be installed
+Activate the virtual environment and install the following;
+
+1. os
+2. pandas
+3. psycopg2
+4. schedule
+5. time
+6. sqlalchemy
+7. tarfile
+
+Inside SDC folder, create a new folder and name it temp
+
+In the sdc.py file; 
+ a) Please do the following adjustments on the paths which have the comment "# Path to be changed"
+        1. Replace "C:\Users\llubowa\Downloads\DEC-20231223T120030Z-001\DEC" of "folder_path", with the path to the folder on the server where SDC files are to be deposited
+        2. Replace "C:\Users\llubowa\Downloads\SDC Counters-20230703T092420Z-001\temp" inside "tar.extractall" with the path to the temp folder you created above
+        3. For "ont_csv_path" and "pon_csv_path" replace "C:\Users\llubowa\Downloads\SDC Counters-20230703T092420Z-001\temp" with the path to the temp folder
+
+ b) Please do the following adjustments to access the postgress database
+        ont_db_connection_params = {
+            'user': 'xxxxxx',    e.g postgres
+            'password': 'xxxxx', e.g operator
+            'host': 'xxxxx', e.g localhost
+            'port': 'xxxxx',      e.g 5432
+            'database': 'ONTS',   
+            }
+
+        pon_db_connection_params = {
+            'user': 'xxxxx',
+            'password': 'xxxxxx',
+            'host': 'xxxxxx',
+            'port': 'xxxxxx',
+            'database': 'PONS',
+        }
+Inside postgres, create two databases and name them 'ONTS' and 'PONS'
