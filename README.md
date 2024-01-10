@@ -1,4 +1,5 @@
 # GPON-Network-Traffic-Visualization
+![Screenshot 2024-01-10 103123](https://github.com/llubowa/GPON-Network-Traffic-Visualisation/assets/122450104/03c1b1e7-4809-4389-a211-afc484a8eb42)
 
 Welcome to the GPON Network Traffic Visualization project! 
 
